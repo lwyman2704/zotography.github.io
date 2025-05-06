@@ -27,7 +27,7 @@ const Hero = ({heroData, setHeroCount, heroCount, setPlayStatus, playStatus}) =>
 
                 <div className="hero-play">
                     <img onClick={()=> setPlayStatus(!playStatus)} src={playStatus?pausebutton:playbutton} alt=""/>
-                    <p>Play Background</p>
+                    <p>Play Portolio Background</p>
                 </div>
 
             </div>
