@@ -1,8 +1,8 @@
 import React from "react"
 import './background.css' 
-import video1 from '../../Assets/bckvideoreduced.mp4'
-import image1 from '../../Assets/bckgrndimg.png'
-import image2 from '../../Assets/zotonamelogo.png'
+import video1 from '../../assets/bckvideoreduced.mp4'
+import image1 from '../../assets/bckgrndimg.png'
+import image2 from '../../assets/zotonamelogo.png'
 
 
 const Background = ({playStatus, heroCount}) => {
