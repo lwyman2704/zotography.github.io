@@ -10,7 +10,7 @@ const App = () => {
     {text1:"Welcome to",text2:"ZoTography"}, 
   ]
   const [heroCount, setHeroCount] = useState(0); //so we can play or pause video
-  const [playStatus, setPlayStatus] = useState(false);//if true the video will play 
+  const [playStatus, setPlayStatus] = useState(true);//if true the video will play 
 
   useEffect(()=>{
     setInterval(() => {
