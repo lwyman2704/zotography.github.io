@@ -1,87 +1,102 @@
-.hero{
-    margin: 0px 120px;
-    margin-top: 270px;
-}
-
-.hero-text{
-    color: #fff;
-    font-size: 110px;
-    font-weight: 500;
-    line-height: 130px;
-}
-
-.hero-explore{
+/* src/Components/Hero/hero.css */
+.hero {
+    margin-top: 150px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 50px;
-    width: fit-content;
-    margin-top: 70px;
-    padding: 20px 20px;
-    padding-left: 30px;
-    border-radius: 60px;
-    background-color: #fff;
-    cursor: pointer;
-    margin-bottom: -40px;
+    justify-content: center;
+    gap: 20px;
 }
 
-.hero-explore img{
-    width: 32px;
-    height: auto;
-    display: block;
-    padding-right: -10px;
-    margin-left: -30px;
-}
-
-.hero-explore p{
-    color: #292929;
-    font-size: 20px;
-    font-weight: 500;
-
-}
-
-.hero-dot-play{
+.hero-text {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 70px;
     margin-top: 50px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.hero-dots{
-    display: flex;
-    align-items: center;
-    gap: 23px;
-    list-style: none;
     margin-left: 10px;
 }
 
-.hero-dot{
-    margin-top: 50px;
-    width: 15px;
-    height: 15px;
-    background: #FFF;
-    border-radius: 7.5px;
-    cursor: pointer;
-
-}
-
-.hero-dot.orange{
-    background: cyan;
-}
-
-.hero-play{
+.hero-explore {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--third-color);
+    transition: background-color 0.3s ease;
+    margin-top: -40px;
+    margin-bottom: 30px;
 }
 
-.hero-play img{
-    width: 48px;
-    height: auto;
-    display: block;
-    margin-left: 1340px;
-}
-.hero-play p{
-    color: white;
-    font-size: 19px;
+.hero-btn {
+    
+    text-decoration: none; /* Removes the underline from the link */
+    color: #ffffff;
 
 }
-  
+
+.hero-explore:hover {
+    background-color: #00ffddbe;
+}
+
+.hero-explore img {
+    height: 16px;
+}
+
+.hero-dot-play {
+    margin-top: -20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-dots {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    margin-top: 40px;
+    margin-left: -410px;
+}
+
+.hero-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff88;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero-dot.orange {
+    background-color: var(--second-color);
+}
+
+.hero-play-pause {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    margin-left: -620px;
+    margin-bottom: 30px;
+}
+
+.hero-play-pause img {
+    height: 30px; /* Corrected play/pause image size */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-text {
+        font-size: 3rem;
+    }
+}

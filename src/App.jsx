@@ -1,36 +1,71 @@
-import Background from "./Components/Background/background.jsx";
-import { useEffect, useState } from 'react'
-import Navbar from "./Components/Navbar/navbar.jsx";
-import Hero from "./Components/Hero/hero.jsx";
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import Navbar from './Components/Navbar/navbar.jsx';
+import Hero from './Components/Hero/hero.jsx';
+import Background from './Components/Background/background.jsx';
+import Services from './Components/Services/services.jsx';
+import About from './Components/About/about.jsx';
+import Gallery from './Components/Gallery/gallery.jsx';
+import Contact from './Components/Contact/contact.jsx';
+import BookingForm from './Components/Booking/BookingForm.jsx';
+import './App.css';
 
-const App = () => {
+const AppContent = () => {
+    const location = useLocation();
+    const isHomePage = location.pathname === '/';
 
-  let heroData = [
-    {text1:"Welcome to",text2:"My Portfolio"}, //so that the text changes depending on the video or click
-    {text1:"Welcome to",text2:"ZoTography"}, 
-  ]
-  const [heroCount, setHeroCount] = useState(0); //so we can play or pause video
-  const [playStatus, setPlayStatus] = useState(true);//if true the video will play 
+    const heroData = [
+        { text1: "Welcome to", text2: "ZoTography" },
+        { text1: "Your Moments", text2: "Captured" },
+        { text1: "Your Ideas", text2: "Imagined" },
+        { text1: "Your Story", text2: "Envisioned" },
+        { text1: "Your Story", text2: "By You, from You" },
+        { text1: "Experience", text2: "ZoTography" },
+    ];
+    const [heroCount, setHeroCount] = useState(0);
+    const [playStatus, setPlayStatus] = useState(false);
 
-  useEffect(()=>{
-    setInterval(() => {
-      setHeroCount((count)=>{return count===1?0:count+1})
-    }, 3000);
-  },[])
+    // This useEffect now runs continuously on all pages, rotating the background
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setHeroCount(count => (count === heroData.length - 1 ? 0 : count + 1));
+        }, 3000);
+        return () => clearInterval(interval);
+    }, [heroData.length]);
 
-  return (
-    <div>
-      <Background playStatus={playStatus} heroCount={heroCount}/> 
-      <Navbar/>
-      <Hero
-        setPlayStatus={setPlayStatus}
-        heroData={heroData[heroCount]}
-        heroCount={heroCount}
-        setHeroCount={setHeroCount}
-        playStatus={playStatus}
-      />
-    </div>
-  )
-}
+    return (
+        <>
+            <Background playStatus={playStatus} heroCount={heroCount} isHomePage={isHomePage} />
+            <Navbar />
+            <Routes>
+                <Route
+                    path="/"
+                    element={
+                        isHomePage ? (
+                            <Hero
+                                setPlayStatus={setPlayStatus}
+                                heroData={heroData[heroCount]}
+                                heroCount={heroCount}
+                                setHeroCount={setHeroCount}
+                                playStatus={playStatus}
+                            />
+                        ) : null
+                    }
+                />
+                <Route path="/services" element={<Services />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/gallery" element={<Gallery />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/book/:serviceType" element={<BookingForm />} />
+            </Routes>
+        </>
+    );
+};
 
-export default App
+const App = () => (
+    <Router>
+        <AppContent />
+    </Router>
+);
+
+export default App;

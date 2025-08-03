@@ -1,0 +1,22 @@
+/* src/Components/Contact/contact.css */
+.content-page {
+    padding-top: 100px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
+    color: var(--first-color);
+    overflow-y: auto;
+}
+
+.section-content {
+    width: 90%;
+    max-width: 1200px;
+    padding: 40px;
+    margin-bottom: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}

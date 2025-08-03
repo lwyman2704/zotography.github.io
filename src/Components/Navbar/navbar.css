@@ -1,29 +1,134 @@
-.nav{
+/* src/Components/Navbar/navbar.css */
+.nav {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* No background on the main nav */
+    padding: 10px 30px;
+    height: 70px;
+    z-index: 1000;
+}
+
+.nav-inner {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-    margin: 40px 120px;
-    color: white;
 }
 
-.nav-logo{
-    font-family: Outfit;
-    font-size: 42px;
-    font-weight: 500;
-}
-
-.nav-menu{
+.nav-logo-link {
     display: flex;
     align-items: center;
-    list-style: none;
-    font-size: 18px;
-    gap: 90px;
-
+    height: auto;
+    padding: 5px 13px; /* Reduced vertical padding for smaller height */
+    
 }
 
-.nav-contact{
+.nav-logo-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-logo-link li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 16px;
+    
+    padding: 10px 20px; /* Padding for the clickable area within the blur box */
+    border-radius: 70px;
+    /* Removed background and blur from individual links */
+    transition: all 0.3s ease;
+}
+.logo-img {
+    height: auto;
+    
+    max-height: 30px; /* A more reasonable size for the logo */
+    width: auto;
+    display: flex;
+    padding: 8px 15px;
+    margin-left: -30px;
+    border-radius: 80px;
+    background-color: rgba(173, 171, 171, 0.589);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: background-color 0.3s ease;
+    
+   
+}
+
+.nav-menu {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    /* This container holds the single blur box for all links */
+    margin-right: 30px;
+    padding: 10px 1px;
+    border-radius: 80px;
+     background-color: rgba(173, 171, 171, 0.589);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: background-color 0.3s ease;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 16px;
+    padding: 10px 20px; /* Padding for the clickable area within the blur box */
+    border-radius: 70px;
+    /* Removed background and blur from individual links */
+    transition: all 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    background-color: rgba(2, 247, 255, 0.637);
+    color: var(--second-color);
+}
+
+.nav-contact a {
     border-radius: 50px;
-    padding: 10px 38px;
-    background: #fff;
-    color: #262626;
+    padding: 8px 28px;
+    background-color: #02ffdda4;
+    color: var(--third-color);
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.nav-contact a:hover {
+    background: #00ffddbe;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-inner {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .nav {
+        height: auto;
+        padding: 15px;
+    }
+
+    .nav-menu {
+        flex-direction: row;
+        gap: 5px;
+        margin: 0;
+    }
+
+    .nav-logo-link {
+        padding: 5px 10px;
+    }
+
+    .nav-menu li a {
+        padding: 5px 10px;
+    }
 }

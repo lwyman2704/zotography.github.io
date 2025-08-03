@@ -1,0 +1,17 @@
+html {
+    /* Ensures the html element takes up the full viewport height */
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /* This allows the body content to scroll vertically */
+    overflow-y: auto;
+    /* Prevents unwanted horizontal scrolling */
+    overflow-x: hidden;
+    height: 100%;
+    
+    background-color: #000000;
+    color: white;
+}

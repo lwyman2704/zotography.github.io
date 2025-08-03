@@ -1,5 +1,23 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+  --first-color: #ffffff;
+  --second-color: #00ffdd;
+  --third-color: #3b3b3b;
+}
+
+body {
   margin: 0;
-  padding: 0;
-  font-family: Poppins;
+  font-family: 'Outfit', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* This prevents horizontal scrolling from overflow */
+  overflow-x: hidden; 
+  /* This ensures the page can scroll vertically when content overflows */
+  overflow-y: auto; 
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
