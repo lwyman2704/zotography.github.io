@@ -8,7 +8,7 @@ import image4 from '../../assets/sample2.jpg';
 import image5 from '../../assets/sample3.jpg';
 import image6 from '../../assets/sample4.jpg';
 import dame1 from '../../assets/dame1.JPG';
-import dame2 from '../../assets/dame2.jpg';
+import dame2 from '../../assets/dame2.JPG';
 import kalani3 from '../../assets/kalani3.JPG';
 import sample2 from '../../assets/sample2.jpg';
 
