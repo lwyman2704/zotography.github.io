@@ -10,7 +10,7 @@ import sample4 from '../../assets/sample4.jpg';
 import sample5 from '../../assets/sample5.jpg';
 import sample6 from '../../assets/sample6.jpg';
 import dame1 from '../../assets/dame1.jpg';
-import dame2 from '../../assets/dame2.jpg';
+import dame2cpy from '../../assets/dame2cpy.png';
 import kalani1 from '../../assets/kalani1.jpg';
 import kalani2 from '../../assets/kalani2.jpg';
 
@@ -35,7 +35,7 @@ const servicesData = [
     },
     {
         title: "Casual Photography",
-        description: "Capturing the emotion and beauty of your special day with timeless, artistic imagery that tells your unique love story.",
+        description: "Capturing the emotion and casualty of your day with timeless, artistic imagery that tells your unique story.",
         image: sample4,
         serviceType: 'wedding'
     },
@@ -48,7 +48,7 @@ const servicesData = [
     {
         title: "Personal Photography",
         description: "From intimate moments to bold statements, we create a visual narrative that celebrates you and your journey.",
-        image: dame2,
+        image: dame2cpy,
         serviceType: 'personal'
     },
 ];

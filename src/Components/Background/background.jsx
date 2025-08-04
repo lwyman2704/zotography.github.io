@@ -8,8 +8,8 @@ import image4 from '../../assets/sample2.jpg';
 import image5 from '../../assets/sample3.jpg';
 import image6 from '../../assets/sample4.jpg';
 import dame1 from '../../assets/dame1.JPG';
-import dame2cpy from '../../assets/dame2cpy.png';
-import kalani2 from '../../assets/kalani2cpy.JPG';
+import dame2 from '../../assets/dame2.jpg';
+import kalani3 from '../../assets/kalani3.JPG';
 import sample2 from '../../assets/sample2.jpg';
 
 
@@ -47,12 +47,12 @@ const Background = ({ playStatus, heroCount, isHomePage }) => {
                 alt="Background"
             />
             <img
-                src={kalani2}
+                src={kalani3}
                 className={heroCount === 4 && !playStatus ? 'background active' : 'background'}
                 alt="Background"
             />
             <img
-                src={dame1}
+                src={dame2}
                 className={heroCount === 5 && !playStatus ? 'background active' : 'background'}
                 alt="Background"
             />
