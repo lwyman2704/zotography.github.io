@@ -9,10 +9,12 @@ import sample3 from '../../assets/sample3.jpg';
 import sample4 from '../../assets/sample4.jpg';
 import sample5 from '../../assets/sample5.jpg';
 import sample6 from '../../assets/sample6.jpg';
+
 import dame1 from '../../assets/dame1.jpg';
 import dame2cpy from '../../assets/dame2cpy.png';
 import kalani1 from '../../assets/kalani1.jpg';
 import kalani2 from '../../assets/kalani2.jpg';
+
 
 const servicesData = [
     {
